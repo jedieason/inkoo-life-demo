@@ -12,7 +12,7 @@ from editorial import EN, ZH
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "docs"
 SOURCE = ROOT / "src"
-ORIGIN = environ.get("SITE_ORIGIN", "https://jedieason.github.io/include-life-demo").rstrip("/")
+ORIGIN = environ.get("SITE_ORIGIN", "https://jedieason.github.io/inkoo-life-demo").rstrip("/")
 
 VIEWS = ("landscape", "portrait", "rear", "joint")
 SCENES = (
