@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="$lang">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9f7f3">
+  <title>$title</title>
+  <meta name="description" content="$description">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Inkoo Life">
+  <meta property="og:title" content="$title">
+  <meta property="og:description" content="$description">
+  <meta property="og:image" content="$origin/assets/social.jpg">
+  <meta property="og:locale" content="$oglocale">
+  <link rel="canonical" href="$canonical">
+  <link rel="alternate" hreflang="en" href="$en_path">
+  <link rel="alternate" hreflang="zh-Hant" href="$zh_path">
+  <link rel="alternate" hreflang="x-default" href="$en_path">
+  <link rel="icon" type="image/svg+xml" href="$base/assets/favicon.svg?v=2">
+  <link rel="preload" href="$base/assets/urbanist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="$base/style.css">
+  <script src="$base/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">$skip</a>
+  <header class="site-header">
+    <div class="reading-progress" aria-hidden="true"></div>
+    <div class="shell header-inner">
+      <nav class="nav nav-left" aria-label="$nav_main">
+        <a href="#collection">$nav_collection</a>
+        <a href="#technology">$nav_technology</a>
+        <a href="#spaces">$nav_spaces</a>
+      </nav>
+      <a class="brand" href="$home" aria-label="$home_label">
+        <img src="$base/assets/inkoo-life.svg" width="160" height="31" alt="Inkoo Life">
+      </a>
+      <nav class="nav nav-right" aria-label="$nav_more">
+        <a href="#film">$nav_film</a>
+        <a class="language" href="$alternate" hreflang="$alternate_lang" lang="$alternate_lang">$language</a>
+        <a class="nav-contact" href="#contact">$nav_contact</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary><span>$menu</span><i aria-hidden="true"></i></summary>
+        <nav class="mobile-nav" aria-label="$nav_main">
+          <a href="#collection">$nav_collection</a>
+          <a href="#technology">$nav_technology</a>
+          <a href="#spaces">$nav_spaces</a>
+          <a href="#film">$nav_film</a>
+          <a href="#contact">$nav_contact</a>
+          <a class="language" href="$alternate" hreflang="$alternate_lang" lang="$alternate_lang">$language</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">$hero_kicker</p>
+        <h1 class="hero-title" id="hero-title">$hero_title</h1>
+        <p class="hero-desc">$hero_desc</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#collection">$explore</a>
+          <a class="text-link play-link" href="#film"><span class="play-icon" aria-hidden="true"></span>$watch</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <div class="hero-media">
+          <img src="$base/assets/hero-1440.webp" srcset="$base/assets/hero-720.webp 720w, $base/assets/hero-1440.webp 1440w" sizes="(max-width: 730px) 100vw, 53vw" width="1440" height="2016" fetchpriority="high" alt="$hero_alt">
+        </div>
+        <figcaption><span>$hero_caption</span><span>$hero_caption_note</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="feature-band">
+      <div class="shell feature-grid">
+        <a href="#technology"><span class="feature-icon pigment-icon" aria-hidden="true"></span><span><strong>E Ink Spectra™ 6</strong><small>$feature_color</small></span></a>
+        <a href="#perceptone"><span class="feature-icon tone-icon" aria-hidden="true"></span><span><strong>PercepTone®</strong><small>$feature_tone</small></span></a>
+        <a href="#app"><span class="feature-icon app-icon" aria-hidden="true"></span><span><strong>$feature_app_title</strong><small>$feature_app</small></span></a>
+      </div>
+    </div>
+
+    <section class="section shell" id="collection" aria-labelledby="collection-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">$nav_collection</p>
+          <h2 id="collection-title">$collection_title</h2>
+        </div>
+        <p>$collection_desc</p>
+      </div>
+      <div class="product">
+        <div class="product-gallery" data-gallery>
+          <figure class="product-picture">
+            <img id="product-view" data-angle="landscape" src="$base/assets/landscape-1500.webp" srcset="$base/assets/landscape-900.webp 900w, $base/assets/landscape-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" loading="lazy" decoding="async" alt="$landscape_alt">
+          </figure>
+          <div class="product-views" role="group" aria-label="$product_views">
+            $product_buttons
+          </div>
+        </div>
+        <div class="product-copy">
+          <p class="eyebrow">$featured</p>
+          <h3>$product_title</h3>
+          <p>$product_desc</p>
+          <dl class="product-spec">
+            $featured_specs
+          </dl>
+          <a class="text-link underlined" href="#sizes">$compare</a>
+        </div>
+      </div>
+      <div class="sizes" id="sizes">
+        <div class="sizes-head">
+          <h3>$sizes_title</h3>
+          <p>$sizes_desc</p>
+        </div>
+        <div class="sizes-grid">$models</div>
+        <p class="fine-print">$spec_note</p>
+      </div>
+    </section>
+
+    <section class="technology" id="technology" aria-labelledby="tech-title">
+      <div class="shell tech-grid">
+        <figure class="tech-image">
+          <img src="$base/assets/pigments-1450.webp" srcset="$base/assets/pigments-850.webp 850w, $base/assets/pigments-1450.webp 1450w" sizes="(max-width: 880px) 93vw, 47vw" width="1450" height="$pigments_height" loading="lazy" decoding="async" alt="$tech_alt">
+        </figure>
+        <div class="tech-copy">
+          <p class="eyebrow">$nav_technology</p>
+          <h2 id="tech-title">$tech_title</h2>
+          <p class="tech-intro">$tech_intro</p>
+          <div class="swatches" role="img" aria-label="$pigment_labels"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tech-details">$technology</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="spaces" aria-labelledby="spaces-title">
+      <div class="section-head spaces-head">
+        <div>
+          <p class="eyebrow">$nav_spaces</p>
+          <h2 id="spaces-title">$spaces_title</h2>
+        </div>
+      </div>
+      <div class="space-filter" role="group" aria-label="$filter_label">
+        <button type="button" data-filter="all" aria-pressed="true">$filter_all</button>
+        <button type="button" data-filter="living" aria-pressed="false">$filter_living</button>
+        <button type="button" data-filter="brands" aria-pressed="false">$filter_brands</button>
+      </div>
+      <div class="space-grid" id="space-grid">$spaces</div>
+    </section>
+
+    <section class="app-section" id="app" aria-labelledby="app-title">
+      <div class="shell app-grid">
+        <div>
+          <p class="eyebrow">Inkoo App</p>
+          <h2 id="app-title">$app_title</h2>
+          <p class="app-intro">$app_intro</p>
+          <ul class="app-list">$app_list</ul>
+        </div>
+        <figure class="app-figure">
+          <img src="$base/assets/dashboard-1137.webp" srcset="$base/assets/dashboard-740.webp 740w, $base/assets/dashboard-1137.webp 1137w" sizes="(max-width: 880px) 92vw, 46vw" width="1137" height="796" loading="lazy" decoding="async" alt="$app_alt">
+          <figcaption>$app_caption</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section shell film" id="film" aria-labelledby="film-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">$nav_film</p>
+          <h2 id="film-title">$film_title</h2>
+        </div>
+      </div>
+      <a class="film-poster" href="$base/assets/inkoo-film.mp4" data-film aria-label="$watch">
+        <img src="$base/assets/film-poster.webp" width="1440" height="690" loading="lazy" decoding="async" alt="$film_alt">
+        <span class="film-play"><span class="play-icon" aria-hidden="true"></span>$play_film</span>
+        <span class="film-runtime">0:59</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="shell">
+      <div class="footer-cta">
+        <div>
+          <p class="eyebrow">$nav_contact</p>
+          <h2>$contact_title</h2>
+          <p>$contact_body</p>
+        </div>
+        <div class="footer-actions">
+          <a class="button button-light" href="mailto:info@dovery.com?subject=Inkoo%20Life%20Inquiry">$email</a>
+          <a class="email-link" href="mailto:info@dovery.com">info@dovery.com</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a class="footer-brand" href="$home"><img src="$base/assets/inkoo-life-white.svg" width="160" height="31" alt="Inkoo Life"></a>
+        <nav aria-label="$nav_main">
+          <a href="#collection">$nav_collection</a>
+          <a href="#technology">$nav_technology</a>
+          <a href="#spaces">$nav_spaces</a>
+          <a href="https://dovery.com/">Dovery</a>
+        </nav>
+      </div>
+      <div class="footer-small">
+        <span>© $current_year Inkoo Life · Dovery</span>
+        <a href="#top">$back_to_top</a>
+      </div>
+    </div>
+  </footer>
+  <dialog class="media-dialog" id="scene-dialog" aria-labelledby="scene-title">
+    <div class="dialog-head"><h2 id="scene-title"></h2><form method="dialog"><button class="dialog-close" type="submit" aria-label="$close">×</button></form></div>
+    <img alt="" decoding="async">
+    <p></p>
+  </dialog>
+  <dialog class="media-dialog film-dialog" id="film-dialog" aria-labelledby="film-dialog-title">
+    <div class="dialog-head"><h2 id="film-dialog-title">$play_film</h2><form method="dialog"><button class="dialog-close" type="submit" aria-label="$close">×</button></form></div>
+    <video controls playsinline preload="none"><track kind="captions" label="English" srclang="en" src="$base/assets/inkoo-film-en.vtt"><track kind="subtitles" label="繁體中文" srclang="zh-Hant" src="$base/assets/inkoo-film-zh.vtt"$track_default></video>
+  </dialog>
+</body>
+</html>
