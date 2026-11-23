@@ -111,15 +111,44 @@ if (typeof sceneDialog.showModal === "function") {
   const sceneTitle = sceneDialog.querySelector("h2");
   const sceneImage = sceneDialog.querySelector("img");
   const sceneDescription = sceneDialog.querySelector("p");
+  let currentSceneRequest = 0;
+
+  function resetSceneImage() {
+    sceneImage.classList.add("is-loading");
+    sceneImage.removeAttribute("src");
+    sceneImage.removeAttribute("srcset");
+  }
+
+  sceneDialog.addEventListener("close", resetSceneImage);
+
   document.querySelectorAll("[data-scene]").forEach((link) => {
     link.addEventListener("click", (event) => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
+
+      const requestId = ++currentSceneRequest;
+      const targetSrc = link.href;
+      const targetAlt = link.querySelector("img")?.alt || link.dataset.title;
+
       sceneTitle.textContent = link.dataset.title;
       sceneDescription.textContent = link.dataset.description;
-      sceneImage.src = link.href;
-      sceneImage.alt = link.querySelector("img").alt;
+
+      // Immediately clear the previous image and keep hidden to prevent flashing old content
+      resetSceneImage();
       sceneDialog.showModal();
+
+      // Decode/load new image before revealing
+      const preload = new Image();
+      preload.src = targetSrc;
+      preload.decode?.()
+        .catch(() => {})
+        .finally(() => {
+          if (requestId === currentSceneRequest && sceneDialog.open) {
+            sceneImage.src = targetSrc;
+            sceneImage.alt = targetAlt;
+            sceneImage.classList.remove("is-loading");
+          }
+        });
     });
   });
 
