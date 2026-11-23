@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f9f7f3">
   <title>Inkoo Life — Color ePaper Frames by Dovery</title>
-  <meta name="description" content="Color ePaper frames with the look of print. Explore Inkoo Life by Dovery for homes, galleries and retail spaces.">
+  <meta name="description" content="Color ePaper frames with the quiet presence of print. Explore Inkoo Life by Dovery for homes, galleries and refined retail spaces.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Inkoo Life">
   <meta property="og:title" content="Inkoo Life — Color ePaper Frames by Dovery">
-  <meta property="og:description" content="Color ePaper frames with the look of print. Explore Inkoo Life by Dovery for homes, galleries and retail spaces.">
+  <meta property="og:description" content="Color ePaper frames with the quiet presence of print. Explore Inkoo Life by Dovery for homes, galleries and refined retail spaces.">
   <meta property="og:image" content="https://jedieason.github.io/inkoo-life-demo/assets/social.jpg">
   <meta property="og:locale" content="en_US">
   <link rel="canonical" href="https://jedieason.github.io/inkoo-life-demo/">
   <link rel="alternate" hreflang="en" href="https://jedieason.github.io/inkoo-life-demo/">
   <link rel="alternate" hreflang="zh-Hant" href="https://jedieason.github.io/inkoo-life-demo/zh/">
+  <link rel="alternate" hreflang="fr" href="https://jedieason.github.io/inkoo-life-demo/fr/">
+  <link rel="alternate" hreflang="es" href="https://jedieason.github.io/inkoo-life-demo/es/">
   <link rel="alternate" hreflang="x-default" href="https://jedieason.github.io/inkoo-life-demo/">
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=3">
   <link rel="apple-touch-icon" href="./assets/favicon.svg?v=3">
@@ -37,7 +39,18 @@
       </a>
       <nav class="nav nav-right" aria-label="Film, language and contact">
         <a href="#film">The Film</a>
-        <a class="language" href="./zh/" hreflang="zh-Hant" lang="zh-Hant">繁中</a>
+        <details class="lang-menu">
+        <summary class="lang-trigger" aria-haspopup="true" aria-label="Select language">
+          <span>EN</span>
+          <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m1 1 4 4 4-4"/></svg>
+        </summary>
+        <div class="lang-dropdown" role="menu">
+          <a href="" class="lang-item is-active" hreflang="en" lang="en">English <span>EN</span></a>
+<a href="zh/" class="lang-item" hreflang="zh-Hant" lang="zh-Hant">繁體中文 <span>繁中</span></a>
+<a href="fr/" class="lang-item" hreflang="fr" lang="fr">Français <span>FR</span></a>
+<a href="es/" class="lang-item" hreflang="es" lang="es">Español <span>ES</span></a>
+        </div>
+      </details>
         <a class="nav-contact" href="#contact">Get in touch</a>
       </nav>
       <details class="mobile-menu">
@@ -48,7 +61,15 @@
           <a href="#spaces">Spaces</a>
           <a href="#film">The Film</a>
           <a href="#contact">Get in touch</a>
-          <a class="language" href="./zh/" hreflang="zh-Hant" lang="zh-Hant">繁中</a>
+          <div class="mobile-lang-wrap">
+        <span class="mobile-lang-title">Select language</span>
+        <div class="mobile-lang-grid">
+          <a href="" class="mobile-lang-btn is-active" hreflang="en" lang="en">EN</a>
+<a href="zh/" class="mobile-lang-btn" hreflang="zh-Hant" lang="zh-Hant">繁中</a>
+<a href="fr/" class="mobile-lang-btn" hreflang="fr" lang="fr">FR</a>
+<a href="es/" class="mobile-lang-btn" hreflang="es" lang="es">ES</a>
+        </div>
+      </div>
         </nav>
       </details>
     </div>
@@ -59,7 +80,7 @@
       <div class="hero-copy">
         <p class="eyebrow">Color ePaper frames by Dovery</p>
         <h1 class="hero-title" id="hero-title">Life, in<br>true <em>color.</em></h1>
-        <p class="hero-desc">Color ePaper frames for photographs, artwork and retail displays, with the matte finish of a print.</p>
+        <p class="hero-desc">Color ePaper frames for photographs, artwork and retail displays, with the gentle matte texture of an archival print.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#collection">Explore the collection</a>
           <a class="text-link play-link" href="#film"><span class="play-icon" aria-hidden="true"></span>Watch the film</a>
@@ -91,8 +112,11 @@
       </div>
       <div class="product">
         <div class="product-gallery" data-gallery>
-          <figure class="product-picture">
-            <img id="product-view" data-angle="landscape" src="./assets/landscape-1500.webp" srcset="./assets/landscape-900.webp 900w, ./assets/landscape-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" loading="lazy" decoding="async" alt="Landscape view of the 13.3-inch Inkoo frame with a wood-grain finish and white mat">
+          <figure class="product-picture" id="product-view">
+            <img class="product-view is-active" data-angle="landscape" src="./assets/landscape-1500.webp" srcset="./assets/landscape-900.webp 900w, ./assets/landscape-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" decoding="async" alt="Landscape view of the 13.3-inch Inkoo frame with a wood-grain finish and white mat">
+<img class="product-view" data-angle="portrait" src="./assets/portrait-1500.webp" srcset="./assets/portrait-900.webp 900w, ./assets/portrait-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" decoding="async" alt="Portrait view of the 13.3-inch Inkoo frame">
+<img class="product-view" data-angle="rear" src="./assets/rear-1500.webp" srcset="./assets/rear-900.webp 900w, ./assets/rear-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" decoding="async" alt="Back of the Inkoo frame with its stand extended">
+<img class="product-view" data-angle="joint" src="./assets/joint-1500.webp" srcset="./assets/joint-900.webp 900w, ./assets/joint-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" decoding="async" alt="Close-up of the wood-grain corner and layered white mat">
           </figure>
           <div class="product-views" role="group" aria-label="Product view">
             <button type="button" aria-pressed="true" aria-controls="product-view" data-view="./assets/landscape" data-angle="landscape" data-alt="Landscape view of the 13.3-inch Inkoo frame with a wood-grain finish and white mat">Landscape</button>
@@ -104,7 +128,7 @@
         <div class="product-copy">
           <p class="eyebrow">Featured frame</p>
           <h3>Inkoo Frame <span>13.3″</span></h3>
-          <p>Finished in wood grain with a white mat. The rear stand supports portrait and landscape placement, and a VESA mount lets you hang it on a wall.</p>
+          <p>Finished in natural wood grain with a bevel-cut white mat. The rear stand supports portrait and landscape placement, and a VESA mount lets you hang it on a wall.</p>
           <dl class="product-spec">
             <div><dt>Display</dt><dd>E Ink Spectra™ 6</dd></div>
 <div><dt>Resolution</dt><dd>1600 × 1200 · 150 DPI</dd></div>
@@ -175,11 +199,11 @@
         <div class="tech-copy">
           <p class="eyebrow">Technology</p>
           <h2 id="tech-title">Color that feels<br>like paper.</h2>
-          <p class="tech-intro">Six pigments give the display its color. Ambient light makes the image visible without a backlight.</p>
+          <p class="tech-intro">Six pigments give the display its color. Ambient light makes the image visible without an artificial backlight.</p>
           <div class="swatches" role="img" aria-label="Six pigments: red, yellow, blue, green, white and black"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="tech-details"><details id="reflective-color" open><summary>Reflective display</summary><p>E Ink Spectra™ 6 reads best where there’s enough light to view a print.</p></details>
+          <div class="tech-details"><details id="reflective-color" open><summary>Reflective display</summary><p>E Ink Spectra™ 6 reads best where there’s enough ambient light to view a fine art print.</p></details>
 <details id="perceptone"><summary>PercepTone® image processing</summary><p>Dovery’s in-house image engine tunes whites, shadows, gradients and texture for the color ePaper palette.</p></details>
-<details id="bistable"><summary>Power on refresh</summary><p>The panel holds a still image without power. Refreshes and standby electronics draw power.</p></details></div>
+<details id="bistable"><summary>Power on refresh</summary><p>The panel holds a still image without drawing power. Refreshes and standby electronics draw power.</p></details></div>
         </div>
       </div>
     </section>
@@ -219,7 +243,7 @@
         </article>
 <article class="space-card" data-space="brands">
           <a class="space-image" href="./assets/boutique-1350.webp" data-scene data-title="Fashion boutique" data-description="Update the lookbook with each collection.">
-            <img src="./assets/boutique-580.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Fashion campaign displayed on an Inkoo panel inside a boutique">
+            <img src="./assets/boutique-580.webp" width="1350" height="900" loading="lazy" decoding="async" alt="Fashion campaign displayed on an Inkoo panel inside a boutique">
             <span class="expand-icon" aria-hidden="true">+</span>
           </a>
           <div class="space-copy"><p class="space-category">For brands</p><h3>Fashion boutique</h3><p>Update the lookbook with each collection.</p></div>
@@ -237,8 +261,7 @@
 <li><strong>Daily dashboard</strong><span>Keep the calendar, to-dos and weather in one glance.</span></li></ul>
         </div>
         <figure class="app-figure">
-          <img src="./assets/dashboard-1137.webp" srcset="./assets/dashboard-740.webp 740w, ./assets/dashboard-1137.webp 1137w" sizes="(max-width: 880px) 92vw, 46vw" width="1137" height="796" loading="lazy" decoding="async" alt="Example Inkoo dashboard with a daily agenda, to-do list, monthly calendar and weather">
-          <figcaption>Dashboard preview</figcaption>
+          <img src="./assets/dashboard-1137.webp" srcset="./assets/dashboard-740.webp 740w, ./assets/dashboard-1137.webp 1137w" sizes="(max-width: 880px) 92vw, 46vw" width="1137" height="758" loading="lazy" decoding="async" alt="Example Inkoo dashboard with a daily agenda, to-do list, monthly calendar and weather on a wooden executive desk">
         </figure>
       </div>
     </section>
@@ -293,7 +316,10 @@
   </dialog>
   <dialog class="media-dialog film-dialog" id="film-dialog" aria-labelledby="film-dialog-title">
     <div class="dialog-head"><h2 id="film-dialog-title">Play the film</h2><form method="dialog"><button class="dialog-close" type="submit" aria-label="Close">×</button></form></div>
-    <video controls playsinline preload="none"><track kind="captions" label="English" srclang="en" src="./assets/inkoo-film-en.vtt"><track kind="subtitles" label="繁體中文" srclang="zh-Hant" src="./assets/inkoo-film-zh.vtt"></video>
+    <video controls playsinline preload="none"><track kind="captions" label="English" srclang="en" src="./assets/inkoo-film-en.vtt" default>
+<track kind="subtitles" label="繁體中文" srclang="zh-Hant" src="./assets/inkoo-film-zh.vtt">
+<track kind="subtitles" label="Français" srclang="fr" src="./assets/inkoo-film-fr.vtt">
+<track kind="subtitles" label="Español" srclang="es" src="./assets/inkoo-film-es.vtt"></video>
   </dialog>
 </body>
 </html>

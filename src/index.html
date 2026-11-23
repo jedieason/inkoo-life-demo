@@ -13,9 +13,11 @@
   <meta property="og:image" content="$origin/assets/social.jpg">
   <meta property="og:locale" content="$oglocale">
   <link rel="canonical" href="$canonical">
-  <link rel="alternate" hreflang="en" href="$en_path">
-  <link rel="alternate" hreflang="zh-Hant" href="$zh_path">
-  <link rel="alternate" hreflang="x-default" href="$en_path">
+  <link rel="alternate" hreflang="en" href="$en_canonical">
+  <link rel="alternate" hreflang="zh-Hant" href="$zh_canonical">
+  <link rel="alternate" hreflang="fr" href="$fr_canonical">
+  <link rel="alternate" hreflang="es" href="$es_canonical">
+  <link rel="alternate" hreflang="x-default" href="$en_canonical">
   <link rel="icon" type="image/svg+xml" href="$base/assets/favicon.svg?v=3">
   <link rel="apple-touch-icon" href="$base/assets/favicon.svg?v=3">
   <link rel="preload" href="$base/assets/urbanist.woff2" as="font" type="font/woff2" crossorigin>
@@ -37,7 +39,7 @@
       </a>
       <nav class="nav nav-right" aria-label="$nav_more">
         <a href="#film">$nav_film</a>
-        <a class="language" href="$alternate" hreflang="$alternate_lang" lang="$alternate_lang">$language</a>
+        $lang_menu
         <a class="nav-contact" href="#contact">$nav_contact</a>
       </nav>
       <details class="mobile-menu">
@@ -48,7 +50,7 @@
           <a href="#spaces">$nav_spaces</a>
           <a href="#film">$nav_film</a>
           <a href="#contact">$nav_contact</a>
-          <a class="language" href="$alternate" hreflang="$alternate_lang" lang="$alternate_lang">$language</a>
+          $mobile_lang_menu
         </nav>
       </details>
     </div>
@@ -91,8 +93,8 @@
       </div>
       <div class="product">
         <div class="product-gallery" data-gallery>
-          <figure class="product-picture">
-            <img id="product-view" data-angle="landscape" src="$base/assets/landscape-1500.webp" srcset="$base/assets/landscape-900.webp 900w, $base/assets/landscape-1500.webp 1500w" sizes="(max-width: 880px) 93vw, 54vw" width="1500" height="1000" loading="lazy" decoding="async" alt="$landscape_alt">
+          <figure class="product-picture" id="product-view">
+            $product_images
           </figure>
           <div class="product-views" role="group" aria-label="$product_views">
             $product_buttons
@@ -157,8 +159,7 @@
           <ul class="app-list">$app_list</ul>
         </div>
         <figure class="app-figure">
-          <img src="$base/assets/dashboard-1137.webp" srcset="$base/assets/dashboard-740.webp 740w, $base/assets/dashboard-1137.webp 1137w" sizes="(max-width: 880px) 92vw, 46vw" width="1137" height="796" loading="lazy" decoding="async" alt="$app_alt">
-          <figcaption>$app_caption</figcaption>
+          <img src="$base/assets/dashboard-1137.webp" srcset="$base/assets/dashboard-740.webp 740w, $base/assets/dashboard-1137.webp 1137w" sizes="(max-width: 880px) 92vw, 46vw" width="1137" height="758" loading="lazy" decoding="async" alt="$app_alt">
         </figure>
       </div>
     </section>
@@ -213,7 +214,7 @@
   </dialog>
   <dialog class="media-dialog film-dialog" id="film-dialog" aria-labelledby="film-dialog-title">
     <div class="dialog-head"><h2 id="film-dialog-title">$play_film</h2><form method="dialog"><button class="dialog-close" type="submit" aria-label="$close">×</button></form></div>
-    <video controls playsinline preload="none"><track kind="captions" label="English" srclang="en" src="$base/assets/inkoo-film-en.vtt"><track kind="subtitles" label="繁體中文" srclang="zh-Hant" src="$base/assets/inkoo-film-zh.vtt"$track_default></video>
+    <video controls playsinline preload="none">$video_tracks</video>
   </dialog>
 </body>
 </html>

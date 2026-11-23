@@ -18,6 +18,21 @@ menu.addEventListener("keydown", (event) => {
   }
 });
 
+const langMenu = document.querySelector(".lang-menu");
+if (langMenu) {
+  document.addEventListener("click", (event) => {
+    if (!langMenu.contains(event.target)) {
+      langMenu.open = false;
+    }
+  });
+  langMenu.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && langMenu.open) {
+      langMenu.open = false;
+      langMenu.querySelector("summary").focus();
+    }
+  });
+}
+
 const progress = document.querySelector(".reading-progress");
 let progressFrame;
 function updateProgress() {
@@ -56,17 +71,23 @@ function openLinkedDetail() {
 window.addEventListener("hashchange", openLinkedDetail);
 openLinkedDetail();
 
-const productImage = document.getElementById("product-view");
+const productViews = [...document.querySelectorAll(".product-picture .product-view")];
 const viewButtons = [...document.querySelectorAll("[data-view]")];
+
+productViews.forEach((img) => {
+  if (img.complete) return;
+  img.decode?.().catch(() => {});
+});
+
 viewButtons.forEach((button) => {
   button.addEventListener("click", () => {
     if (button.getAttribute("aria-pressed") === "true") return;
+    const targetAngle = button.dataset.angle;
     viewButtons.forEach((view) => view.setAttribute("aria-pressed", String(view === button)));
-    const asset = button.dataset.view;
-    productImage.dataset.angle = button.dataset.angle;
-    productImage.srcset = `${asset}-900.webp 900w, ${asset}-1500.webp 1500w`;
-    productImage.src = `${asset}-1500.webp`;
-    productImage.alt = button.dataset.alt;
+    productViews.forEach((img) => {
+      const match = img.dataset.angle === targetAngle;
+      img.classList.toggle("is-active", match);
+    });
   });
 });
 
